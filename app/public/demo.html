@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head><title>Demo Mode</title></head>
+<body>
+<script>
+const demoData = [{
+    id: "demo001",
+    nom_complet: "Alice Martin",
+    matricule: "TEST001",
+    date: "03/05/2026",
+    top3: [
+        {filiere: "IA", score: 91.2},
+        {filiere: "Big Data", score: 78.5},
+        {filiere: "Fullstack", score: 64.3}
+    ]
+}, {
+    id: "demo002",
+    nom_complet: "Bob Chen",
+    matricule: "TEST002",
+    date: "02/05/2026",
+    top3: [
+        {filiere: "Cyber", score: 85.7},
+        {filiere: "Robotique", score: 72.1},
+        {filiere: "Fullstack", score: 58.9}
+    ]
+}, {
+    id: "demo003",
+    nom_complet: "Carla Silva",
+    matricule: "TEST003",
+    date: "01/05/2026",
+    top3: [
+        {filiere: "Fullstack", score: 88.4},
+        {filiere: "IA", score: 75.6},
+        {filiere: "Big Data", score: 62.2}
+    ]
+}];
+localStorage.setItem('orientation_soumissions', JSON.stringify(demoData));
+// Also set admin session
+localStorage.setItem('orientation_admin', 'true');
+location.href = '/#/resultat?matricule=TEST001';
+</script>
+</body>
+</html>
