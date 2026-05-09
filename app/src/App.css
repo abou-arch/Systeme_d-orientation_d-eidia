@@ -1,1 +1,302 @@
-/* App-specific styles - using Tailwind CSS utility classes */
+/* ============================================================
+   App.css — Personnalisation aux couleurs de l'UEMF
+   (Université Euro-Méditerranéenne de Fès)
+   - Bleu institutionnel #0B4F8A
+   - Vert accent #5BB146
+   - Fond blanc / gris clair
+   ============================================================ */
+
+/* --- Conteneurs principaux ----------------------------------- */
+.app-shell {
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: hsl(var(--foreground));
+}
+
+.app-shell--gray {
+  background-color: hsl(var(--uemf-gray));
+}
+
+/* --- En-tête institutionnel ---------------------------------- */
+.app-header {
+  background-color: #ffffff;
+  color: hsl(var(--uemf-blue));
+  border-bottom: 1px solid hsl(var(--border));
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 4px rgba(11, 79, 138, 0.06);
+  position: relative;
+}
+
+/* Liseré vert subtil sous le header (rappel feuille du logo) */
+.app-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    hsl(var(--uemf-blue)) 0%,
+    hsl(var(--uemf-blue)) 70%,
+    hsl(var(--uemf-green)) 100%
+  );
+}
+
+.app-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: hsl(var(--uemf-blue));
+}
+
+.app-header__brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: hsl(var(--uemf-blue));
+  color: #ffffff;
+  border-radius: 0.5rem;
+  font-weight: 800;
+  position: relative;
+}
+
+/* Petite touche verte (feuille) sur le mark */
+.app-header__brand-mark::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background-color: hsl(var(--uemf-green));
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+.app-header__nav {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.app-header__nav a {
+  color: hsl(210 20% 30%);
+  text-decoration: none;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.app-header__nav a:hover,
+.app-header__nav a.active {
+  color: hsl(var(--uemf-blue));
+  border-bottom-color: hsl(var(--uemf-green));
+}
+
+/* --- Section héro -------------------------------------------- */
+.app-hero {
+  position: relative;
+  padding: 4rem 1.5rem;
+  background: linear-gradient(
+    135deg,
+    hsl(var(--uemf-blue-deep)) 0%,
+    hsl(var(--uemf-blue)) 100%
+  );
+  color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.app-hero::after {
+  /* Discret motif de points (gris clair sur bleu) */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 25% 30%, rgba(91, 177, 70, 0.18) 0 3px, transparent 4px),
+    radial-gradient(circle at 75% 70%, rgba(255, 255, 255, 0.10) 0 2px, transparent 3px);
+  background-size: 48px 48px, 36px 36px;
+  pointer-events: none;
+}
+
+.app-hero h1 {
+  font-size: clamp(1.875rem, 3.2vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.app-hero p {
+  max-width: 42rem;
+  margin: 0 auto 1.5rem;
+  font-size: 1.05rem;
+  opacity: 0.92;
+}
+
+.app-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: hsl(var(--uemf-green));
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+  box-shadow: 0 6px 18px -6px rgba(0, 0, 0, 0.35);
+}
+
+.app-hero__cta:hover {
+  transform: translateY(-1px);
+  background-color: hsl(var(--uemf-green-deep));
+  box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.45);
+}
+
+/* --- Sections de contenu ------------------------------------- */
+.app-section {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.app-section--gray {
+  background-color: hsl(var(--uemf-gray));
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.app-section--gray > .app-section__inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.app-section__title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: hsl(var(--uemf-blue));
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.app-section__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3.5rem;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    hsl(var(--uemf-blue)) 0%,
+    hsl(var(--uemf-green)) 100%
+  );
+  border-radius: 2px;
+}
+
+/* --- Grille de cartes ---------------------------------------- */
+.app-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.app-card {
+  background-color: #ffffff;
+  border: 1px solid hsl(var(--border));
+  border-top: 3px solid hsl(var(--uemf-green));
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 3px rgba(11, 79, 138, 0.05);
+}
+
+.app-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -12px rgba(11, 79, 138, 0.20);
+}
+
+.app-card__title {
+  color: hsl(var(--uemf-blue));
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.app-card__body {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* --- Liens institutionnels ----------------------------------- */
+a {
+  color: hsl(var(--uemf-blue));
+  text-decoration-color: hsl(var(--uemf-green) / 0.6);
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: hsl(var(--uemf-blue-deep));
+}
+
+/* --- Pied de page -------------------------------------------- */
+.app-footer {
+  background-color: hsl(var(--uemf-blue-deep));
+  color: rgba(255, 255, 255, 0.85);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  border-top: 3px solid hsl(var(--uemf-green));
+  margin-top: 4rem;
+}
+
+.app-footer__brand {
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.app-footer a {
+  color: hsl(var(--uemf-green-soft));
+}
+
+/* --- Sélection de texte aux couleurs UEMF -------------------- */
+::selection {
+  background-color: hsl(var(--uemf-blue) / 0.85);
+  color: #ffffff;
+}
+
+/* --- Barre de défilement personnalisée ----------------------- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--uemf-gray));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--uemf-blue) / 0.55);
+  border-radius: 6px;
+  border: 2px solid hsl(var(--uemf-gray));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--uemf-blue));
+}
