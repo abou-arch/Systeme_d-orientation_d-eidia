@@ -2,50 +2,129 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================
+   Charte graphique — Université Euromed de Fès (UEMF)
+   - Bleu UEMF (#0B4F8A)  : couleur signature institutionnelle
+   - Vert UEMF (#5BB146)  : accent (feuille du logo)
+   - Blanc / gris clair   : fond
+   ============================================================ */
+
 @layer base {
   :root {
+    /* Fond blanc institutionnel + gris clair pour sections */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 210 30% 12%;
+
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 30% 12%;
+
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --popover-foreground: 210 30% 12%;
+
+    /* Primaire : bleu UEMF #0B4F8A */
+    --primary: 209 85% 29%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondaire : gris clair institutionnel */
+    --secondary: 210 25% 96%;
+    --secondary-foreground: 209 85% 22%;
+
+    /* Tons doux */
+    --muted: 210 25% 96%;
+    --muted-foreground: 210 12% 42%;
+
+    /* Accent : vert UEMF #5BB146 */
+    --accent: 109 45% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructif */
+    --destructive: 0 78% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Bordures et inputs */
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+
+    /* Anneau de focus : bleu UEMF */
+    --ring: 209 85% 29%;
+
     --radius: 0.5rem;
+
+    /* ----------- Variables UEMF (utilisables en HSL) ----------- */
+    --uemf-blue:        209 85% 29%;   /* #0B4F8A */
+    --uemf-blue-deep:   210 85% 20%;   /* bleu plus profond, hover */
+    --uemf-blue-soft:   210 60% 45%;   /* bleu plus clair */
+    --uemf-blue-pale:   210 60% 95%;   /* fond bleu très clair */
+    --uemf-green:       109 45% 48%;   /* #5BB146 */
+    --uemf-green-deep:  120 50% 32%;
+    --uemf-green-soft:  109 50% 88%;   /* fond vert pâle */
+    --uemf-gray:        210 20% 96%;   /* fond gris clair section */
+    --uemf-gray-mid:    210 14% 70%;
+    --uemf-white:       0 0% 100%;
+
+    /* Sidebar (utilisé par tailwind.config.js) — assorti UEMF */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 210 30% 15%;
+    --sidebar-primary: 209 85% 29%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 25% 96%;
+    --sidebar-accent-foreground: 209 85% 22%;
+    --sidebar-border: 210 20% 90%;
+    --sidebar-ring: 209 85% 29%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
+    /* Mode sombre : bleu nuit, accents vert et bleu clairs */
+    --background: 215 35% 8%;
+    --foreground: 210 25% 95%;
+
+    --card: 215 32% 11%;
+    --card-foreground: 210 25% 95%;
+
+    --popover: 215 32% 11%;
+    --popover-foreground: 210 25% 95%;
+
+    /* Primaire éclairci pour rester lisible sur fond sombre */
+    --primary: 210 80% 55%;
+    --primary-foreground: 215 35% 8%;
+
+    --secondary: 215 25% 18%;
+    --secondary-foreground: 210 25% 95%;
+
+    --muted: 215 25% 16%;
+    --muted-foreground: 210 15% 70%;
+
+    /* Accent vert plus lumineux en mode sombre */
+    --accent: 109 50% 55%;
+    --accent-foreground: 215 35% 8%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 210 25% 95%;
+
+    --border: 215 25% 20%;
+    --input: 215 25% 20%;
+    --ring: 210 80% 55%;
+
+    --uemf-blue:        210 80% 55%;
+    --uemf-blue-deep:   210 70% 35%;
+    --uemf-blue-soft:   210 70% 65%;
+    --uemf-blue-pale:   215 30% 18%;
+    --uemf-green:       109 50% 55%;
+    --uemf-green-deep:  120 40% 35%;
+    --uemf-green-soft:  120 30% 22%;
+    --uemf-gray:        215 25% 14%;
+    --uemf-gray-mid:    210 15% 50%;
+    --uemf-white:       210 25% 95%;
+
+    /* Sidebar dark mode */
+    --sidebar-background: 215 35% 10%;
+    --sidebar-foreground: 210 25% 95%;
+    --sidebar-primary: 210 80% 55%;
+    --sidebar-primary-foreground: 215 35% 8%;
+    --sidebar-accent: 215 25% 18%;
+    --sidebar-accent-foreground: 210 25% 95%;
+    --sidebar-border: 215 25% 20%;
+    --sidebar-ring: 210 80% 55%;
   }
 }
 
@@ -56,6 +135,15 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    /* Pile typographique sobre et institutionnelle, alignée UEMF */
+    font-family: "Inter", "Poppins", "Helvetica Neue", system-ui, -apple-system,
+      "Segoe UI", Roboto, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Inter", "Poppins", system-ui, sans-serif;
+    letter-spacing: -0.01em;
+    color: hsl(var(--uemf-blue));
   }
 }
 
@@ -63,11 +151,114 @@
   .text-balance {
     text-wrap: balance;
   }
+
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
   .animate-pulse-slow {
     animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* ========== Utilitaires UEMF ========== */
+
+  /* Texte couleur signature */
+  .text-uemf       { color: hsl(var(--uemf-blue)); }
+  .text-uemf-green { color: hsl(var(--uemf-green)); }
+
+  /* Fonds signature */
+  .bg-uemf            { background-color: hsl(var(--uemf-blue)); }
+  .bg-uemf-deep       { background-color: hsl(var(--uemf-blue-deep)); }
+  .bg-uemf-green      { background-color: hsl(var(--uemf-green)); }
+  .bg-uemf-pale       { background-color: hsl(var(--uemf-blue-pale)); }
+  .bg-uemf-gray       { background-color: hsl(var(--uemf-gray)); }
+
+  /* Dégradé institutionnel (bleu profond -> bleu UEMF) */
+  .bg-uemf-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--uemf-blue-deep)) 0%,
+      hsl(var(--uemf-blue)) 100%
+    );
+  }
+
+  /* Dégradé héro (bleu UEMF -> vert UEMF en touche subtile) */
+  .bg-uemf-hero {
+    background: linear-gradient(
+      120deg,
+      hsl(var(--uemf-blue-deep)) 0%,
+      hsl(var(--uemf-blue)) 65%,
+      hsl(var(--uemf-green)) 130%
+    );
+  }
+
+  /* Bordures */
+  .border-uemf       { border-color: hsl(var(--uemf-blue)); }
+  .border-uemf-green { border-color: hsl(var(--uemf-green)); }
+
+  /* Bouton institutionnel UEMF */
+  .btn-uemf {
+    background-color: hsl(var(--uemf-blue));
+    color: #fff;
+    padding: 0.625rem 1.25rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease,
+      box-shadow 0.2s ease;
+    box-shadow: 0 4px 14px -4px hsl(var(--uemf-blue) / 0.45);
+  }
+  .btn-uemf:hover {
+    background-color: hsl(var(--uemf-blue-deep));
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px -6px hsl(var(--uemf-blue) / 0.55);
+  }
+
+  /* Bouton secondaire vert (CTA d'accent) */
+  .btn-uemf-green {
+    background-color: hsl(var(--uemf-green));
+    color: #fff;
+    padding: 0.625rem 1.25rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease,
+      box-shadow 0.2s ease;
+    box-shadow: 0 4px 14px -4px hsl(var(--uemf-green) / 0.45);
+  }
+  .btn-uemf-green:hover {
+    background-color: hsl(var(--uemf-green-deep));
+    transform: translateY(-1px);
+  }
+
+  /* Carte avec liseré vert (rappel de la feuille du logo) */
+  .card-uemf {
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-top: 3px solid hsl(var(--uemf-green));
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    box-shadow: 0 1px 3px hsl(210 30% 12% / 0.04),
+      0 8px 24px -12px hsl(var(--uemf-blue) / 0.12);
+  }
+
+  /* Soulignement institutionnel pour titres de section */
+  .heading-uemf {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    color: hsl(var(--uemf-blue));
+  }
+  .heading-uemf::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 3rem;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      hsl(var(--uemf-blue)) 0%,
+      hsl(var(--uemf-green)) 100%
+    );
+    border-radius: 2px;
   }
 }
 

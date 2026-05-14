@@ -5,6 +5,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // ============================================================
+        // Variables shadcn/ui (alimentées par index.css)
+        // ============================================================
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -48,6 +51,99 @@ module.exports = {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+
+        // ============================================================
+        // Palette UEMF — bleu #0B4F8A + vert #5BB146
+        // Utilisable via bg-uemf-blue-600, text-uemf-green-500, etc.
+        // ============================================================
+        uemf: {
+          // Bleu institutionnel UEMF
+          blue: {
+            50:  "#EAF2FA",
+            100: "#CFE0F2",
+            200: "#9FC1E5",
+            300: "#6FA1D8",
+            400: "#3F82CB",
+            500: "#1F66B0",
+            600: "#0B4F8A",  // ← bleu UEMF officiel
+            700: "#093F70",
+            800: "#072F55",
+            900: "#04203A",
+            950: "#021321",
+            DEFAULT: "#0B4F8A",
+          },
+          // Vert UEMF (feuille du logo)
+          green: {
+            50:  "#EEF8EA",
+            100: "#D6EFCC",
+            200: "#AEDF9B",
+            300: "#86CF6A",
+            400: "#5BB146",  // ← vert UEMF officiel
+            500: "#4A9A38",
+            600: "#3B7B2D",
+            700: "#2D5E22",
+            800: "#1F4118",
+            900: "#11240D",
+            DEFAULT: "#5BB146",
+          },
+          gray: {
+            50:  "#F8FAFC",
+            100: "#F1F5F9",
+            200: "#E2E8F0",
+            300: "#CBD5E1",
+            400: "#94A3B8",
+            500: "#64748B",
+          },
+          white: "#FFFFFF",
+        },
+
+        // ============================================================
+        // Override violet / indigo / purple → bleu UEMF
+        // (Pour que tes anciennes classes bg-violet-600, from-indigo-500,
+        //  text-purple-700... basculent automatiquement sans toucher au JSX)
+        // ============================================================
+        violet: {
+          50:  "#EAF2FA",
+          100: "#CFE0F2",
+          200: "#9FC1E5",
+          300: "#6FA1D8",
+          400: "#3F82CB",
+          500: "#1F66B0",
+          600: "#0B4F8A",  // bleu UEMF
+          700: "#093F70",
+          800: "#072F55",
+          900: "#04203A",
+          950: "#021321",
+        },
+        indigo: {
+          50:  "#EAF2FA",
+          100: "#CFE0F2",
+          200: "#9FC1E5",
+          300: "#6FA1D8",
+          400: "#3F82CB",
+          500: "#1F66B0",
+          600: "#0B4F8A",
+          700: "#093F70",
+          800: "#072F55",
+          900: "#04203A",
+          950: "#021321",
+        },
+        purple: {
+          50:  "#EAF2FA",
+          100: "#CFE0F2",
+          200: "#9FC1E5",
+          300: "#6FA1D8",
+          400: "#3F82CB",
+          500: "#1F66B0",
+          600: "#0B4F8A",
+          700: "#093F70",
+          800: "#072F55",
+          900: "#04203A",
+          950: "#021321",
+        },
+      },
+      fontFamily: {
+        sans: ['"Inter"', '"Poppins"', "system-ui", "sans-serif"],
       },
       borderRadius: {
         xl: "calc(var(--radius) + 4px)",
@@ -58,6 +154,16 @@ module.exports = {
       },
       boxShadow: {
         xs: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        uemf: "0 8px 24px -8px rgba(11, 79, 138, 0.35)",
+        "uemf-green": "0 8px 24px -8px rgba(91, 177, 70, 0.35)",
+      },
+      backgroundImage: {
+        "uemf-gradient":
+          "linear-gradient(135deg, #072F55 0%, #0B4F8A 100%)",
+        "uemf-hero":
+          "linear-gradient(120deg, #072F55 0%, #0B4F8A 65%, #5BB146 130%)",
+        "uemf-blue-green":
+          "linear-gradient(90deg, #0B4F8A 0%, #5BB146 100%)",
       },
       keyframes: {
         "accordion-down": {

@@ -1,5 +1,5 @@
 import type { FiliereInfo } from '@/types';
-import { et } from 'date-fns/locale/et';  
+//import { et } from 'date-fns/locale/et';  
 
 export const FILIERES_DATA: Record<string, FiliereInfo> = {
   Fullstack: {
