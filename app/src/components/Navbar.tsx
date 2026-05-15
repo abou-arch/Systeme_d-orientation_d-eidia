@@ -33,7 +33,7 @@ export default function Navbar({ isAdmin, onLogout }: NavbarProps) {
             <Compass className="h-5 w-5" />
           </div>
           <span className="text-lg font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
-            Orientation Pro
+            Eidia Orientation
           </span>
         </Link>
 
