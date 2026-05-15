@@ -3,6 +3,7 @@ export type Filiere = typeof FILIERES[number];
 
 export interface Reponses {
   Q3?: number;
+  MBTI_FAMILY?: string; 
   analyse?: number;
   algebre?: number;
   proba_stats?: number;

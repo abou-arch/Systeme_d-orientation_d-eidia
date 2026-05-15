@@ -52,7 +52,7 @@ export default function Home() {
                 Orientation intelligente
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6">
-                Découvre ta <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">filière idéale</span> en informatique
+                Découvre ta <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">filière idéale</span> en Eidia
               </h1>
               <p className="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
                 Un questionnaire intelligent qui analyse tes compétences, tes préférences et ta personnalité pour te orienter vers la carrière IT qui te correspond vraiment.
