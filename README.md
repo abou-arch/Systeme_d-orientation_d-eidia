@@ -113,7 +113,7 @@ Le **Top 3** des filières avec le score le plus élevé est affiché à l'étud
 
 ## 👤 Auteur
 
-**Aboubacar Cissé** — Étudiant en classe préparatoire ingénieur à l'EIDIA (Université Euro-Méditerranéenne de Fès).
+**Cherif Aboubacar Camara** — Étudiant en classe préparatoire ingénieur à l'EIDIA (Université Euro-Méditerranéenne de Fès).
 
 - GitHub : [@abou-arch](https://github.com/abou-arch)
 
