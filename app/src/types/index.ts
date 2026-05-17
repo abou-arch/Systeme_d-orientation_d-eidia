@@ -21,6 +21,8 @@ export interface Reponses {
   Q12?: string;
   Q13?: string;
   MBTI?: string;
+  Q14?: string;
+  Q15?: string;
   [key: string]: number | string | undefined;
 }
 

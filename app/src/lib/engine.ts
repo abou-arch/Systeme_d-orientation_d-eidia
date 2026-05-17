@@ -6,10 +6,10 @@ export const POIDS_PROG: Record<Filiere, number> = {
 };
 
 export const POIDS_MATH: Record<string, Record<Filiere, number>> = {
-  analyse:     { Fullstack: 0, Cyber: 1, 'Big Data': 2, IA: 2, Robotique: 2 },
-  algebre:     { Fullstack: 0, Cyber: 1, 'Big Data': 2, IA: 3, Robotique: 1 },
-  proba_stats: { Fullstack: 0, Cyber: 1, 'Big Data': 3, IA: 3, Robotique: 0 },
-  analyse_num: { Fullstack: 0, Cyber: 0, 'Big Data': 1, IA: 3, Robotique: 3 },
+  analyse:     { Fullstack: 1, Cyber: 1, 'Big Data': 2, IA: 2, Robotique: 2 },
+  algebre:     { Fullstack: 1, Cyber: 1, 'Big Data': 2, IA: 3, Robotique: 2 },
+  proba_stats: { Fullstack: 1, Cyber: 1, 'Big Data': 3, IA: 3, Robotique: 0 },
+  analyse_num: { Fullstack: 1, Cyber: 0, 'Big Data': 1, IA: 3, Robotique: 2 },
 };
 
 export const POIDS_EXTRA: Record<string, Record<Filiere, number>> = {
@@ -71,7 +71,27 @@ export const MBTI_MAP: Record<string, Record<Filiere, number>> = {
   ESFJ: { Fullstack: 3, Cyber: 0, 'Big Data': 1, IA: 0, Robotique: 0 },
   ESFP: { Fullstack: 3, Cyber: 0, 'Big Data': 1, IA: 0, Robotique: 2 },
 };
+export const MBTI_FAMILY_MAP: Record<string, Record<Filiere, number>> = {
+  NT: { Fullstack: 1, Cyber: 2, 'Big Data': 3, IA: 3, Robotique: 2 },
+  NF: { Fullstack: 3, Cyber: 0, 'Big Data': 2, IA: 2, Robotique: 0 },
+  SJ: { Fullstack: 2, Cyber: 3, 'Big Data': 2, IA: 1, Robotique: 2 },
+  SP: { Fullstack: 2, Cyber: 1, 'Big Data': 1, IA: 1, Robotique: 3 },
+};
+export const CHOIX_Q14: Record<string, Record<Filiere, number>> = {
+  A: { Fullstack: 3, Cyber: 0, 'Big Data': 0, IA: 0, Robotique: 1 },
+  B: { Fullstack: 0, Cyber: 3, 'Big Data': 0, IA: 0, Robotique: 0 },
+  C: { Fullstack: 0, Cyber: 0, 'Big Data': 3, IA: 1, Robotique: 0 },
+  D: { Fullstack: 0, Cyber: 0, 'Big Data': 1, IA: 3, Robotique: 0 },
+  E: { Fullstack: 0, Cyber: 0, 'Big Data': 0, IA: 1, Robotique: 3 },
+};
 
+export const CHOIX_Q15: Record<string, Record<Filiere, number>> = {
+  A: { Fullstack: 3, Cyber: 0, 'Big Data': 0, IA: 0, Robotique: 1 },
+  B: { Fullstack: 0, Cyber: 3, 'Big Data': 1, IA: 0, Robotique: 0 },
+  C: { Fullstack: 1, Cyber: 0, 'Big Data': 3, IA: 1, Robotique: 0 },
+  D: { Fullstack: 0, Cyber: 0, 'Big Data': 1, IA: 3, Robotique: 0 },
+  E: { Fullstack: 0, Cyber: 0, 'Big Data': 0, IA: 1, Robotique: 3 },
+};
 export const MBTI_POIDS = 1.5;
 
 export function calculerScore(reponses: Reponses): Resultats {
@@ -143,6 +163,35 @@ export function calculerScore(reponses: Reponses): Resultats {
       scoreMax[f] += 3 * MBTI_POIDS;
     }
   }
+  const mbtiFamily = reponses.MBTI_FAMILY?.toUpperCase();
+if (!mbti && mbtiFamily && mbtiFamily in MBTI_FAMILY_MAP) {
+  for (const f of FILIERES) {
+    scores[f] += MBTI_FAMILY_MAP[mbtiFamily][f] * MBTI_POIDS;
+    scoreMax[f] += 3 * MBTI_POIDS;
+  }
+}
+// Q14
+const choix14 = (reponses.Q14 ?? '').toUpperCase();
+if (choix14 in CHOIX_Q14) {
+  for (const f of FILIERES) {
+    scores[f] += CHOIX_Q14[choix14][f];
+  }
+}
+for (const f of FILIERES) {
+  scoreMax[f] += 3;
+}
+
+// Q15
+const choix15 = (reponses.Q15 ?? '').toUpperCase();
+if (choix15 in CHOIX_Q15) {
+  for (const f of FILIERES) {
+    scores[f] += CHOIX_Q15[choix15][f];
+  }
+}
+for (const f of FILIERES) {
+  scoreMax[f] += 3;
+}
+
 
   const pourcentages: Record<Filiere, number> = {
     Fullstack: 0, Cyber: 0, 'Big Data': 0, IA: 0, Robotique: 0

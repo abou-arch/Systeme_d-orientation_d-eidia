@@ -11,7 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Progress } from '@/components/ui/progress';
 import { useOrientation } from '@/hooks/useOrientation';
 import { QUESTIONS, MBTI_OPTIONS } from '@/lib/data';
-import { ChevronRight, ChevronLeft, Check, User, Hash, Sparkles, AlertCircle, Brain } from 'lucide-react';
+import { ChevronRight, ChevronLeft, Check, User, Hash, AlertCircle, Brain } from 'lucide-react';
 
 // ── Familles MBTI ────────────────────────────────────────────────
 const MBTI_FAMILIES = [

@@ -84,29 +84,114 @@ export const QUESTIONS = {
     { id: 'Q11', label: 'Défis techniques', question: 'Tu aimes les défis techniques et la recherche de vulnérabilités ?' },
   ],
   choix: [
-    {
-      id: 'Q12',
-      label: 'Préférence A',
-      question: 'Quel type de projet te motive le plus ?',
-      options: [
-        { value: 'A', label: 'Créer une application web complète avec une belle interface' },
-        { value: 'B', label: 'Sécuriser un réseau et trouver des failles' },
-        { value: 'C', label: 'Analyser des millions de données pour en extraire des insights' },
-        { value: 'D', label: 'Développer un modèle prédictif intelligent' },
-        { value: 'E', label: 'Construire un robot autonome' },
-      ],
+   {
+  id: 'Q12',
+  label: 'Préférence A',
+  question: 'Quel projet aurais-tu le plus envie de réaliser et de montrer ?',
+  options: [
+    { 
+      value: 'A', 
+      label: 'Une appli web complète, du back-end à l\'interface, utilisée tous les jours par de vrais utilisateurs' 
     },
-    {
-      id: 'Q13',
-      label: 'Préférence B',
-      question: 'Dans quel environnement tu t\'épanouis le plus ?',
-      options: [
-        { value: 'A', label: 'Startup tech agile avec livraisons fréquentes' },
-        { value: 'B', label: 'Entreprise avec enjeux sécurité critiques' },
-        { value: 'C', label: 'Data-driven company avec culture analytics' },
-        { value: 'D', label: 'Lab R&D avec recherche fondamentale' },
-        { value: 'E', label: 'Industrie avec systèmes physiques et IoT' },
-      ],
+    { 
+      value: 'B', 
+      label: 'Un pentest qui révèle comment compromettre un système qu\'on croyait sûr' 
+    },
+    { 
+      value: 'C', 
+      label: 'Une analyse qui change la stratégie d\'une entreprise grâce à ce que disent ses données' 
+    },
+    { 
+      value: 'D', 
+      label: 'Un modèle qui apprend à prédire ou reconnaître quelque chose mieux qu\'un humain' 
+    },
+    { 
+      value: 'E', 
+      label: 'Un robot autonome qui perçoit son environnement et réagit en temps réel' 
     },
   ],
+},
+   {
+  id: 'Q13',
+  question: 'Dans lequel de ces moments te reconnais-tu le plus ?',
+  options: [
+    { 
+      value: 'A', 
+      label: 'Voir mon code transformer une page blanche en interface utilisable le jour même' 
+    },
+    { 
+      value: 'B', 
+      label: 'Traquer une faille, reconstituer une attaque, comprendre comment un système a été compromis' 
+    },
+    { 
+      value: 'C', 
+      label: 'Plonger dans un fichier brut de données pour en sortir une histoire cohérente' 
+    },
+    { 
+      value: 'D', 
+      label: 'Passer des heures sur un problème mathématique jusqu\'à trouver la bonne approche' 
+    },
+    { 
+      value: 'E', 
+      label: 'Voir un moteur, un servo ou un robot réagir parce que mon code l\'a commandé' 
+    },
+  ],
+},
+  
+  {
+  id: 'Q14',
+  label: 'Module préféré',
+  question: 'Lequel de ces apprentissages te ferait te lever motivé le matin ?',
+  options: [
+    { 
+      value: 'A', 
+      label: 'Apprendre à enchaîner front-end, back-end et base de données pour donner vie à une appli complète' 
+    },
+    { 
+      value: 'B', 
+      label: 'Apprendre à démonter un système, repérer ses faiblesses et penser comme un attaquant' 
+    },
+    { 
+      value: 'C', 
+      label: 'Apprendre à faire parler des téraoctets de données pour en sortir une décision claire' 
+    },
+    { 
+      value: 'D', 
+      label: 'Apprendre à concevoir un réseau de neurones qui apprend tout seul à partir d\'exemples' 
+    },
+    { 
+      value: 'E', 
+      label: 'Apprendre à brancher des capteurs sur un robot et écrire le code qui le fait réagir' 
+    },
+  ],
+},
+{
+
+  id: 'Q15',
+  label: 'Projet d\'école',
+  question: 'Si on te laissait choisir ton projet de fin d\'année, lequel tu prendrais ?',
+  options: [
+    { 
+      value: 'A', 
+      label: 'Bâtir une plateforme web utilisée par d\'autres étudiants, hébergée dans le cloud et accessible partout' 
+    },
+    { 
+      value: 'B', 
+      label: 'Auditer la sécurité d\'un site réel, trouver ses portes d\'entrée et livrer un rapport qui fera bouger l\'équipe' 
+    },
+    { 
+      value: 'C', 
+      label: 'Récupérer un gros jeu de données publiques, le croiser, et révéler une tendance que personne n\'avait remarquée' 
+    },
+    { 
+      value: 'D', 
+      label: 'Entraîner un modèle qui comprend le sentiment de textes en français ou en arabe' 
+    },
+    { 
+      value: 'E', 
+      label: 'Faire évoluer un robot dans un environnement inconnu, capable de s\'orienter sans aide' 
+    },
+  ],
+},
+]
 };
