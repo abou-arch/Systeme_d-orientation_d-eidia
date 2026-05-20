@@ -1,0 +1,115 @@
+PROPRIETARY SOFTWARE LICENSE
+=============================
+
+Copyright (c) 2026 Aboubacar Cissé. All Rights Reserved.
+
+Product: Système d'Orientation EIDIA
+Repository: Systeme_d-orientation_d-eidia
+
+
+1. OWNERSHIP
+------------
+This software, including all source code, documentation, design,
+algorithms, user interface, scoring engine, and associated assets
+(collectively, the "Software"), is the exclusive intellectual property
+of Aboubacar Cissé (the "Author").
+
+
+2. GRANT OF RIGHTS
+------------------
+No rights or licenses are granted to any person or entity under this
+agreement, except as explicitly stated herein.
+
+Viewing of the source code in this repository is permitted solely for
+the purpose of:
+  (a) personal evaluation by potential clients or employers;
+  (b) academic study with no commercial intent;
+  (c) verification of the Author's technical capabilities.
+
+
+3. PROHIBITED ACTIONS
+---------------------
+Without prior written permission from the Author, no person or entity
+may:
+
+  (a) copy, reproduce, or duplicate any portion of the Software;
+  (b) modify, adapt, translate, or create derivative works from the
+      Software;
+  (c) distribute, sublicense, sell, rent, lease, or transfer the
+      Software in any form;
+  (d) use the Software, in whole or in part, in any commercial or
+      non-commercial product or service;
+  (e) reverse engineer, decompile, or disassemble the Software except
+      as permitted by applicable law;
+  (f) remove, alter, or obscure any copyright, trademark, or other
+      proprietary notices.
+
+
+4. COMMERCIAL LICENSING
+-----------------------
+Commercial use, including but not limited to deployment within an
+institution, integration into another product, or resale, requires a
+separate paid commercial license agreement with the Author.
+
+To request a commercial license, contact:
+  Aboubacar Cissé
+  Email: [ton.email@exemple.com]
+  GitHub: https://github.com/abou-arch
+
+
+5. THIRD-PARTY COMPONENTS
+-------------------------
+This Software incorporates open-source libraries (React, Vite,
+Tailwind CSS, shadcn/ui, Framer Motion, Lucide Icons, and others)
+which remain under their respective licenses (primarily MIT and
+Apache 2.0). These licenses apply only to those specific components
+and do not extend to the Software as a whole.
+
+A list of third-party components and their licenses is available
+upon request.
+
+
+6. NO WARRANTY
+--------------
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NONINFRINGEMENT.
+
+
+7. LIMITATION OF LIABILITY
+--------------------------
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE,
+ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+8. ENFORCEMENT
+--------------
+Unauthorized use, reproduction, or distribution of the Software
+constitutes copyright infringement and may result in legal action.
+
+The Author reserves all rights not expressly granted under this
+license.
+
+
+9. GOVERNING LAW
+----------------
+This License shall be governed by and construed in accordance with
+the laws of the Kingdom of Morocco, without regard to its conflict
+of law provisions.
+
+
+10. CONTACT
+-----------
+For licensing inquiries, partnerships, or permission requests:
+
+  Cherif Aboubacar Camara
+  Fès, Morocco
+  Email: abouccamara1@gmail.com
+  GitHub: https://github.com/abou-arch
+
+
+---
+This license was last updated on May 17, 2026.
