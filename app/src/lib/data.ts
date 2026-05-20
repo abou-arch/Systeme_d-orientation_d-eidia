@@ -111,87 +111,62 @@ export const QUESTIONS = {
     },
   ],
 },
-   {
+{
   id: 'Q13',
-  question: 'Dans lequel de ces moments te reconnais-tu le plus ?',
+  label: 'Environnement de travail',
+  question: 'Dans quel environnement tu te vois t\'épanouir ?',
   options: [
     { 
       value: 'A', 
-      label: 'Voir mon code transformer une page blanche en interface utilisable le jour même' 
+      label: 'En entreprise web / SaaS : équipe produit, projets long terme, utilisateurs réels' 
     },
     { 
       value: 'B', 
-      label: 'Traquer une faille, reconstituer une attaque, comprendre comment un système a été compromis' 
+      label: 'En cabinet de cybersécurité ou en freelance pentest : missions variées et autonomie' 
     },
     { 
       value: 'C', 
-      label: 'Plonger dans un fichier brut de données pour en sortir une histoire cohérente' 
+      label: 'Dans un département data / analytics d\'une grande boîte (banque, conseil, e-commerce)' 
     },
     { 
       value: 'D', 
-      label: 'Passer des heures sur un problème mathématique jusqu\'à trouver la bonne approche' 
-    },
-    { 
-      value: 'E', 
-      label: 'Voir un moteur, un servo ou un robot réagir parce que mon code l\'a commandé' 
-    },
-  ],
-},
-  
-  {
-  id: 'Q14',
-  label: 'Module préféré',
-  question: 'Lequel de ces apprentissages te ferait te lever motivé le matin ?',
-  options: [
-    { 
-      value: 'A', 
-      label: 'Apprendre à enchaîner front-end, back-end et base de données pour donner vie à une appli complète' 
-    },
-    { 
-      value: 'B', 
-      label: 'Apprendre à démonter un système, repérer ses faiblesses et penser comme un attaquant' 
-    },
-    { 
-      value: 'C', 
-      label: 'Apprendre à faire parler des téraoctets de données pour en sortir une décision claire' 
-    },
-    { 
-      value: 'D', 
-      label: 'Apprendre à concevoir un réseau de neurones qui apprend tout seul à partir d\'exemples' 
-    },
-    { 
-      value: 'E', 
-      label: 'Apprendre à brancher des capteurs sur un robot et écrire le code qui le fait réagir' 
+      label: 'En labo de recherche ou startup IA : creuser des modèles, expérimenter, publier' 
     },
   ],
 },
 {
-
-  id: 'Q15',
-  label: 'Projet d\'école',
-  question: 'Si on te laissait choisir ton projet de fin d\'année, lequel tu prendrais ?',
+  id: 'Q14',
+  label: 'Priorité dans le job',
+  question: 'Ce qui compte le plus pour toi dans un job ?',
   options: [
     { 
       value: 'A', 
-      label: 'Bâtir une plateforme web utilisée par d\'autres étudiants, hébergée dans le cloud et accessible partout' 
+      label: 'Stabilité et rémunération prévisible, projets long terme' 
     },
     { 
       value: 'B', 
-      label: 'Auditer la sécurité d\'un site réel, trouver ses portes d\'entrée et livrer un rapport qui fera bouger l\'équipe' 
-    },
-    { 
-      value: 'C', 
-      label: 'Récupérer un gros jeu de données publiques, le croiser, et révéler une tendance que personne n\'avait remarquée' 
+      label: 'Liberté et autonomie totale dans la gestion de mon temps' 
     },
     { 
       value: 'D', 
-      label: 'Entraîner un modèle qui comprend le sentiment de textes en français ou en arabe' 
-    },
-    { 
-      value: 'E', 
-      label: 'Faire évoluer un robot dans un environnement inconnu, capable de s\'orienter sans aide' 
+      label: 'Impact et sens : travailler sur des problèmes qui me tiennent à cœur' 
     },
   ],
 },
-]
-};
+{
+  id: 'Q15',
+  label: 'Mode de travail',
+  question: 'Tu préfères travailler comment au quotidien ?',
+  options: [
+    { 
+      value: 'A', 
+      label: 'En équipe, en interaction constante, avec des points réguliers' 
+    },
+    { 
+      value: 'B', 
+      label: 'En solo profond, casque vissé, longues sessions de concentration' 
+    },
+  ],
+},
+  ]
+}
